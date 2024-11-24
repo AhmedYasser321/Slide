@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    font-weight: bold;
+    margin: auto;
+}
+
+@media(max-width:424px){
+.container{
+    width: 300px;
+    height: 150px;
+}
+}
+@media(min-width:425px) and (max-width:767px){
+.container{
+    width: 400px;
+    height: 200px;
+}
+}
+@media(min-width:768px){
+.container{
+    width: 600px;
+    height: 300px;
+}
+}
+
+.slide{
+
+position: relative;
+}
+
+@media(max-width:424px){
+    .slide{
+        width: 300px;
+        height: 150px;
+    }
+}
+@media(min-width:425px) and (max-width:767px){
+    .slide{
+        width: 400px;
+        height: 200px;
+    }
+}
+@media(min-width:768px){
+    .slide{
+        width: 600px;
+        height: 300px;
+    }
+}
+
+.slide .slide-number{
+    position: absolute;
+    z-index: 2;
+    background-color: black;
+    color: white;
+    padding: 6px;
+}
+
+.slide img{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     opacity: 0;
+     transition:opacity 1s;
+     -webkit-transition:opacity 1s;
+     -moz-transition:opacity 1s;
+     -ms-transition:opacity 1s;
+     -o-transition:opacity 1s;
+     border-radius: 4px;
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     -ms-border-radius: 4px;
+     -o-border-radius: 4px;
+}
+.slide img.active{
+opacity: 1;
+}
+
+.control{
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width:424px){
+    .control{
+font-size: 14px;
+padding: 5px;
+    }
+}
+@media(min-width:425px) and (max-width:767px){
+    .control{
+       font-size: 14px;
+    }
+}
+
+.control .indicator ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: auto;
+    padding: 0;
+}
+@media(max-width:424px){
+    .control .indicator ul{
+        gap: 0;
+    } 
+}
+.control .indicator ul li.active{
+    background-color: #0993a5;
+    color: white;
+}
+
+.control .prev,
+.control .next,
+.control .indicator ul li{
+ cursor: pointer;
+ margin-top: 15px;
+ border-radius:4px ;
+ -webkit-border-radius:4px ;
+ -moz-border-radius:4px ;
+ -ms-border-radius:4px ;
+ -o-border-radius:4px ;
+}
+
+@media(max-width:424px){
+    .control .prev,
+.control .next,
+.control .indicator ul li{
+ padding: 3px 6px;
+    }
+}
+
+@media(min-width:425px) and (max-width:767px){
+    .control .prev,
+    .control .next,
+    .control .indicator ul li{
+        padding: 4px 8px;
+    }
+}
+@media(min-width:768px){
+    .control .prev,
+    .control .next,
+    .control .indicator ul li{
+        padding: 6px 10px;
+    }
+}
+
+.control .prev.disabled,
+.control .next.disabled{
+    cursor:no-drop;
+}
+.control .prev,
+.control .next{
+    background-color: #0993a5;
+    color: white;
+}
+
